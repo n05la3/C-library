@@ -1,11 +1,11 @@
 //namesearch.c: Learning to use the strncmp function
 #include<stdio.h>
 #include<string.h>
-const char name[81]= "Prince";
+const char name[81]= "My name is Prince";
 
 int main(void)
 {
-	if(strcmp(name,"Princee")==0)
+	if(strcmp("Prince",name)==0)
 	{
 		printf("Yes Calson is found in the string given!\n");
 	}
