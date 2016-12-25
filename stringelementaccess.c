@@ -3,7 +3,7 @@
 int main(void)
 {
 	const char name[81] = "my name is D Pro";
-	printf("%c\n",*(name+16));
+	printf("%c\n",*(name+4));
 	return 0;
 
 }
