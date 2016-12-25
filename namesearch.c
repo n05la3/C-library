@@ -1,15 +1,19 @@
-//namesearch.c: Learning to use the strncmp function
+//namesearch.c: Learning to use the strcmp function
 #include<stdio.h>
 #include<string.h>
-const char name[81]= "My name is Prince";
+#define SIZE 10
+const char *name[SIZE]= {"Prince, Pot, Pen, Pineaple, People, Pin, Purse, Program, Pet, Pen"};
 
 int main(void)
 {
-	if(strcmp("Prince",name)==0)
-	{
-		printf("Yes Calson is found in the string given!\n");
-	}
-    else 
-    	printf("%s\n","The entered name is not found in the string\n");
+	char my_guess[81];
+	int i;
+	printf("Guess a name starting with P, stored in the p-name database: ");
+    fgets(my_guess,81,stdin);
+    for(i=0; i<SIZE,i++)
+    {
+    	if(!strcmp(my_guess,name[i]))
+    		return 
+    }
     return 0;
 }
