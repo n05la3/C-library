@@ -2,6 +2,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #define SIZE 6
+
+#include<stdio.h>
 int larger_int(const int *num, int n)
 {
      int i;
@@ -20,3 +22,4 @@ int main(void)
     	"The larger of the five elements is: ",array_to_compare[larger_int(array_to_compare,SIZE)],"and it's index is: ",larger_int(array_to_compare,SIZE));
 	exit(0);
 }
+
