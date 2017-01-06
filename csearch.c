@@ -9,7 +9,7 @@ int main(void)
 {
 	int i,ch_count=0;
     char *ch_search[SIZE]= {"Church","Hair","Thief","Chair","Farm","Film","Chief","Kettle","Chat","Chef"};
-	char *ch_store[SIZE];
+	char *ch_store[SIZE]={"\0"};
     for(i=0;i<SIZE;i++)
     {
     	if(strncmp("Ch",ch_search[i],2)==0)
