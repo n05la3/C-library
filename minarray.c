@@ -13,7 +13,7 @@ int min_array(int *arr)
 }
 int main(void)
 {
-	int num_to_compare[SIZE]={10,9,8,7,6,5,4,3,2,1},i,min=num_to_compare[0];
+	int num_to_compare[SIZE]={10,9,8,7,6,5,4,3,2,1};
 
 	printf("The min of the 10 integers is: %d\n", min_array(num_to_compare));
 	return 0;
