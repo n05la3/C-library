@@ -5,15 +5,16 @@
 int min_array(int *arr)
 {
 	int i,min=*arr;
-	for(i=0; i<SIZE-1; i++)
-		if(*(arr+i)<*((arr+i)+1))
-			min=*arr+i;
-		else min=*((arr+i)+1);
+	printf("%d",min);
+	char ch=getchar();
+	for(i=0; i<SIZE; i++)
+		if(*(arr+i)<min)
+			min=*(arr+i);
 	return min;
 }
 int main(void)
 {
-	int num_to_compare[SIZE]={10,9,8,7,6,5,4,3,2,1};
+	int num_to_compare[SIZE]={10,9,19,7,6,1,4,3,2,90};
 
 	printf("The min of the 10 integers is: %d\n", min_array(num_to_compare));
 	return 0;
