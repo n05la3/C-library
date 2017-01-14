@@ -16,9 +16,8 @@ void select_sortf(int *arr_to_sort)
 	{
 		i_min=j;
 		for(i=j+1;i<SIZE;i++)
-			if(*(arr_to_sort+i)<*(arr_to_sort+i_min))
-				i_min=i;
-		if(i_min!=j)
+			i_min=(*(arr_to_sort+i)<*(arr_to_sort+i_min))? i:i_min;
+	    if(i_min!=j)
 			swap(arr_to_sort,j,i_min);
 	}
 }
@@ -33,7 +32,7 @@ void print_arr(int *arr)
 
 int main(void)
 {
-	int ints_to_sort[SIZE]={1,5,4,4,5,6,7,8,-9,10};//test data should not include a zero else swap fails.
+	int ints_to_sort[SIZE]={1,5,4,3,12,6,7,8,-9,11};//test data should not include a zero else swap fails.
 	printf("Unsorted array: ");
 	print_arr(ints_to_sort);
 	select_sortf(ints_to_sort);
