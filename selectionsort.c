@@ -1,7 +1,7 @@
 //selectionsort.c: Using the selection sort algorithm to sort int elements in an array
 #include<stdio.h>
 #define SIZE 10
-void swap(int *ints_to_sort,int a,int b)//Only used because function won't require input from user.
+void swap(int *ints_to_sort,int a,int b)
 {
 	*(ints_to_sort+a)=*(ints_to_sort+a)**(ints_to_sort+b);
 	*(ints_to_sort+b)=*(ints_to_sort+a)/(*(ints_to_sort+b));
@@ -15,7 +15,7 @@ void select_sortf(int *arr_to_sort)
 	for(j=0;j<SIZE;j++)
 	{
 		i_min=j;
-		for(i=j+1;i<SIZE;i++)
+		for(i=0;i<SIZE;i++)
 			i_min=(*(arr_to_sort+i)<*(arr_to_sort+i_min))? i:i_min;
 	    if(i_min!=j)
 			swap(arr_to_sort,j,i_min);
