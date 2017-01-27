@@ -7,7 +7,7 @@ int main(void)
 {
 	FILE *fp;
 	char words[SIZE];
-	if((fp=fopen("wordy.txt","w"))==NULL)
+	if((fp=fopen("wordy.txt","a+"))==NULL)//a+ mode enables for read, write. 
 	{
 		fprintf(stdout,"%s","Could not open the file\n");
 		exit(1);
@@ -17,8 +17,8 @@ int main(void)
 	while(fgets(words,SIZE,stdin)!=NULL&&words[0]!='\n')
 		fprintf(fp,"%s",words);
 	puts("\nFile Contents: \n");
-	rewind(fp);
-	while((fscanf(fp,"%s",words))==1)
+	rewind(fp);//ensures reading starts from beginning of the file.
+	while((fscanf(fp,"%s",words))==1)//ensuring this while loop works well.
 		puts(words);
     if(fclose(fp)!=0)
 		fprintf(stderr, "%s\n", "Unable to close the file\n");
