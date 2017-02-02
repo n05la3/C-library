@@ -46,3 +46,17 @@ void get_int(int *n)
 		}
 	}
 }
+
+extern void fget_ignore_newline(char *arr_no_newline)
+{
+	int i=0;
+	while(arr_no_newline[i]!='\0')
+	{
+		if(arr_no_newline[i]=='\n')
+		{
+			arr_no_newline[i]='\0';
+			break;
+		}
+		i++;
+	}
+}
