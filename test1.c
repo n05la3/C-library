@@ -1,20 +1,20 @@
-#include<stdio.h>	
+#include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 int main(void)
 {
-	int num1=10;
-	char num2;
-	FILE *fb,*ft;
-	if((fb=fopen("myfile","w+b"))==NULL)
+	FILE *fp;
+	if((fp=fopen("myfile.txt","w+"))==NULL)
 	{
 		fprintf(stderr, "%s\n", "Fatal Error, Some files are missing");
 		exit(EXIT_FAILURE);
 	}
-    fwrite(&num2,sizeof(char),1,fb);
-    fwrite(&num1,sizeof(int),1,fb);    
-    rewind(fb);
- 	fseek(fb,1L,SEEK_SET);
- 	fread(&num1,sizeof(int),1,fb);
- 	printf("%d\n",num1);
-	return 0;
+	//fwrite(&n_counter,sizeof(char),1,fp);
+	//fwrite(&speed,sizeof(char),1,fp);
+	char ptr_date[strlen(__DATE__)];
+	fwrite(ptr_date,sizeof(char),strlen(__DATE__),fp);
+	printf("%s\n", ptr_date);
+	//fwrite(ptr_time,sizeof(char),strlen(__TIME__),fp);
+	//fwrite(user_name,sizeof(char),strlen(user_name),fp);
+
 }
