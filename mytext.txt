@@ -1,0 +1,2 @@
+It's pretty cool learning to use arrays and files 
+
